@@ -33,7 +33,7 @@ const Component: React.FC<ComponentProps> = ({}) => {
             </div>
             <div className="divide-y divide-gray-200">
               <Card className="mt-8 space-y-6">
-                <form action="#" className="space-y-6" method="POST">
+                <form action="#" className="space-y-6">
                   <div>
                     <label className="text-sm font-bold text-gray-600 block" htmlFor="email">
                       Email
@@ -65,7 +65,7 @@ const Component: React.FC<ComponentProps> = ({}) => {
                     />
                   </div>
                   <Button className="w-full py-2 px-4 bg-coopgreen hover:bg-coophover rounded text-white text-sm">
-                    Sign in
+                    <Link href="/dashboard">Sign in</Link>
                   </Button>
                 </form>
               </Card>
@@ -84,28 +84,5 @@ const Component: React.FC<ComponentProps> = ({}) => {
   );
 };
 
-interface MountainIconProps {
-  className?: string;
-}
-
-const MountainIcon: React.FC<MountainIconProps> = ({ className, ...props }) => {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
-    </svg>
-  );
-};
 
 export default Component;
